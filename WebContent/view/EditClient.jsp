@@ -50,6 +50,7 @@
 						<th> Action </th>
 						<th> Action </th>	
 					</tr>
+					<!-- Parcourir la liste des clients -->
 					<c:forEach items="${list_client}" var="client">
 		 							
 						<tr>
@@ -73,7 +74,7 @@
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                        <div>77477 77 77</div>
+                        <div>77431 35 50</div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>

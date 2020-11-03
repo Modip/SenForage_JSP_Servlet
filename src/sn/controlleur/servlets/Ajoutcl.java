@@ -52,12 +52,15 @@ public class Ajoutcl extends HttpServlet {
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//Creation des clients
+		
+		Client client = new Client ();
+		
 		String prenom = request.getParameter("prenom").toString ();
 		String nom = request.getParameter("nom").toString ();
 		String adresse = request.getParameter("adresse").toString ();
 		String telephone = request.getParameter("telephone").toString ();
-		
-		Client client = new Client ();
 
 		int id=Integer.parseInt(request.getParameter("village_id").toString());
 		Village village = villagedao.get(id) ;
@@ -69,7 +72,11 @@ public class Ajoutcl extends HttpServlet {
 		client.setTelephone(telephone) ;
 		client.setVillage(village); 
 		int ok = clientdao.add(client);
-		System.out.println("Client bien enregistrer");
+		//System.out.println("Client bien enregistrer");
+		request.setAttribute("list_client", clientdao.getAll());
+
+		request.getRequestDispatcher("/view/EditClient.jsp").forward(request, response);
+
 		
 	}
 

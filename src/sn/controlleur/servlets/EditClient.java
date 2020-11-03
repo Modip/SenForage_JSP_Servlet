@@ -35,13 +35,11 @@ public class EditClient extends HttpServlet {
 		req.setAttribute("list_client", clientdao.getAll());
 		req.setAttribute("list_village", villagedao.getAll());
 		req.getRequestDispatcher("/view/EditClient.jsp").forward(req, resp);
-
 	
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 	
 	
 	}
